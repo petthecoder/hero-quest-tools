@@ -1,0 +1,11 @@
+<div class="room">
+    <h1>Room</h1>
+    <div class="messages">
+        @for (message of messages; track message) {
+            {{ message }}
+        }
+    </div>
+    <input type="text" placeholder="Enter your message" [(ngModel)]="newMessage" />
+    <button (click)="sendMessage()">Send</button>
+  </div>
+  

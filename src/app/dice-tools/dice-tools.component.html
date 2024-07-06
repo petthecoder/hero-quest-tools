@@ -1,0 +1,27 @@
+<div class="dice-container">
+    <div class="dice" *ngFor="let die of dice; let i = index">
+      <div class="die-shape" [ngClass]="die.shape">
+        <div class="die-label">{{ die.type }}</div>
+      </div>
+      <input
+        type="number"
+        [(ngModel)]="diceCounts[i]"
+        min="0"
+        placeholder="Cantidad"
+      />
+    </div>
+  </div>
+  <button (click)="calculate()">Calculate</button>
+  <div class="container">
+    <canvas id="myChart"></canvas>
+  </div>
+  <div class="container">
+    Average Damage: {{averageDamage}}
+    Median Damage: {{medianDamage}}
+    10% Crit Cap: {{critCap10}}
+    20% Crit Cap: {{critCap20}}
+    30% Crit Cap: {{critCap30}}
+  </div> 
+  <div class="loading" *ngIf="loading">
+    <div class="loader"></div>
+  </div>

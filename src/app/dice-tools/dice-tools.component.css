@@ -1,0 +1,121 @@
+.dice-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    height: 150px;
+  }
+  
+  .dice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+  }
+
+  .dice input{
+    width: 50px;
+  }
+  
+  .die-shape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  
+  .die-label {
+    position: absolute;
+    top: -40px;
+    font-size: 1.2em;
+    color: black;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .triangle {
+    background-image: url('/assets/img/d4-icon.jpg');
+  }
+  
+  .square {
+    background-image: url('/assets/img/d6-icon.jpg');
+  }
+  
+  .diamond {
+    background-image: url('/assets/img/d8-icon.jpg');
+  }
+  
+  .pentagon {
+    background-image: url('/assets/img/d10-icon.jpg');
+  }
+  
+  .hexagon {
+    background-image: url('/assets/img/d12-icon.jpg');
+  }
+  
+  .octagon {
+    background-image: url('/assets/img/d20-icon.jpg');
+  }
+  
+  .circle {
+    background-image: url('/assets/img/d100-icon.jpg');
+  }
+  
+  button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background-color: #008cba;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #005f5f;
+  }
+  
+  .container {
+    display: block;
+    max-width: 1000px;
+    margin: 20px auto 0;
+  }
+
+  .loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);;
+  }
+
+  .loader {
+    width: 120px;
+    height: 120px;
+    border: 15px solid #CCC;
+    border-bottom-color: #008cba;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    position: absolute;
+    top: calc(50% - 60px);
+    left: calc(50% - 60px);
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
